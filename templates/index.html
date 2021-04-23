@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div id="col" id="swup" class="transition-fade">
+      <div id="top">
+        <video id="top_video" poster="../static/img/ready_one.jpg" playsinline autoplay muted loop>
+          <source src="../static/video/ready_one.mp4" type="video/mp4" />
+        </video>
+        <div id="info-button"><a href=""><img src="../static/img/info.png" width="45px" height="45px" id="bp"></a></div>
+        <div id="play-button"><a href=""><h3 id="bo">Смотреть «Первому игроку приготовиться»</h3></a></div>
+      </div>
+      <div id="center-content">
+        <h1 id="news-title">Новости</h1>
+        <div>
+          <h3 id="news-title">Тут будут новости</h3>
+        </div>
+      </div>
+
+      <div id="articles">
+        <h1 id="art-title">Наши статьи</h1>
+        <div>
+          <h3 id="art-title">Тут будт статьи</h3>
+        </div>
+      </div>
+  </div>
+{% endblock %}
