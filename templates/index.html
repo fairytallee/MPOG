@@ -9,18 +9,32 @@
         <a href="/none"><div id="info-button"><img src="../static/img/info.png" width="45px" height="45px" id="bp"></div></a>
         <a href="/none"><div id="play-button"><h3 id="bo">Смотреть «Первому игроку приготовиться»</h3></div></a>
       </div>
+
       <div id="center-content">
         <h1 id="news-title">Новости</h1>
-        <div>
-          <h3 id="news-title">Тут будут новости</h3>
-        </div>
+        {% for item in news%}
+          <div id="card">
+            <h3 id="card-text">{{item.title}}</h3>
+          </div>
+        {% endfor %}
       </div>
 
-      <div id="articles">
-        <h1 id="art-title">Наши статьи</h1>
-        <div>
-          <h3 id="art-title">Тут будт статьи</h3>
+      {% if current_user.is_authenticated %}
+        <div id="articles">
+          <div style="width: 100%; display: flex; margin-bottom: 10px;">
+          <div style="left: 50px;"><h1 id="art-title" style="margin-left: 60px;">Наши статьи</h1></div> <div style="right: 40px; position: absolute; margin-top: 7px;"><a href="/add_art" id="name-link"><h3>Добавить статью</h3></a></div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+            {% for item in articles %}
+              <div id="art" style="background-image: url(../static/img/articles/{{ item.picture }});">
+                <a href="/art/{{ item.id }}"><div style="width: 70%; height: 80%; margin: auto; margin-top: 7%; align-content: center; overflow: hidden; text-overflow: ellipsis;">
+                  <h3 id="art-text">{{item.title}}</h3>
+                </div></a>
+              </div>
+            {% endfor %}
+          </div>
         </div>
-      </div>
+      {% endif %}
+
   </div>
 {% endblock %}

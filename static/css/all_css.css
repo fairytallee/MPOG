@@ -218,7 +218,7 @@ body {
 
    #center-content {
     width: 101%;
-    height: 470px;
+    min-height: 470px;
     left: 0;
     background-color: #262626;
     margin-top: -70px;
@@ -234,9 +234,8 @@ body {
     margin-bottom: -20px;
    }
 
-   #first-card {
-    background-image: url(files/wonder.webp);
-     background-color: rgba(69, 69, 69, 0.6);
+   #card {
+    background-color: rgba(69, 69, 69, 0.6);
     background-blend-mode: overlay;
     background-size: 456px 301px;
     height: 301px;
@@ -248,22 +247,19 @@ body {
     font-family: areal tahoma bold;
     font-size: 20px;
    }
-   /*#first-card h3 {
-    margin-bottom: -400px;
-   }*/
    #card-text {
     position: absolute;
     text-align: center;
     margin-top: 200px;
     margin-left: 20px;
    }
-   #first-card:hover {
+   #card:hover {
     box-shadow: 0 0 70px #9c9c9c;
     transform: scale(1.04);
     border-radius: 22px;
    }
 
-   #second-card {
+   /*#second-card {
     height: 351px;
     width: 300px;
     margin-left: 530px;
@@ -281,9 +277,6 @@ body {
     left: 0;
     top: 0;
    }
-   /*#first-card h3 {
-    margin-bottom: -400px;
-   }*/
    #card-min-text {
     position: absolute;
     text-align: center;
@@ -353,12 +346,12 @@ body {
     box-shadow: 0 0 70px #9c9c9c;
     transform: scale(1.04);
     border-radius: 22px;
-   }
+   }*/
 
 
    #articles {
     width: 100%;
-    height: 470px;
+    /*min-height: 470px;*/
     margin-top: 0px;
     text-align: center;
     position: relative;
@@ -368,41 +361,34 @@ body {
     color: #DCDCDC;
     text-align: left;
     font-size: 28px;
-    margin-left: 60px;
-    margin-bottom: -20px;
    }
 
-   #first-art {
-    background-image: url(files/knif.jpg);
-    background-color: rgba(150, 73, 0, 0.5);
+   #art {
+    background-color: rgba(66, 66, 66, 0.7);;
     background-blend-mode: overlay;
     background-size: 456px 301px;
-    height: 301px;
-    width: 456px;
-    margin-left: 44px;
-    margin-top: 40px;
+    height: 300px;
+    width: 400px;
     transition: 0.5s;
     border-radius: 12px;
+    color: white;
     font-family: areal tahoma bold;
-    font-size: 20px;
-   }
-   /*#first-card h3 {
-    margin-bottom: -400px;
-   }*/
-   #art-text {
-    position: absolute;
     text-align: center;
-    font-size: 35px;
-    margin-top: 90px;
-    margin-left: 95px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
    }
-   #first-art:hover {
+   #art-text {
+    font-size: 35px;
+
+   }
+   #art:hover {
     box-shadow: 0 0 70px #9c9c9c;
     transform: scale(1.04);
     border-radius: 22px;
    }
 
-   #second-art {
+  /* #second-art {
     background-image: url(files/tenet_art.jpg);
     background-color: rgba(150, 0, 20, 0.7);
     background-blend-mode: overlay;
@@ -454,7 +440,7 @@ body {
     box-shadow: 0 0 70px #9c9c9c;
     transform: scale(1.04);
     border-radius: 22px;
-   }
+   }*/
 
 
    #footer {
@@ -465,7 +451,6 @@ body {
     height: 180px;
     position: relative;
     padding-top: 15px;
-    margin-top: 50px;
    }
 
    #wides {
