@@ -80,5 +80,10 @@ def register():
     return render_template('register.html', title='Регистрация - Sputnik', form=form)
 
 
+@app.route("/none")
+def none():
+    return render_template("none.html",title='Ошибка 404 - Sputnic')
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')

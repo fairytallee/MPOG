@@ -22,10 +22,10 @@ body {
 
   .form-control {
   width:90%;
-  margin-top: 5px;
+  margin-top: 10px;
   resize: vertical;
   padding:12px;
-  border-radius:15px;
+  border-radius:9px;
   border:0;
   box-shadow:4px 4px 10px rgba(0,0,0,0.06);
   height:7px;
@@ -195,7 +195,7 @@ body {
     z-index: 10;
     margin-top: -160px;
     margin-left: 100px;
-    width: 410px;
+    width: 430px;
     height: 50px;
     border-radius: 10px;
     background-color: rgba(70, 70, 70, 0.9);
@@ -221,7 +221,7 @@ body {
     height: 470px;
     left: 0;
     background-color: #262626;
-    margin-top: -10px;
+    margin-top: -70px;
     position: relative;
     padding-top: 10px;
    }
@@ -606,7 +606,7 @@ body {
       padding: .5em 2em;
       outline: none;
       border: 2px solid;
-      border-radius: 1px;
+      border-radius: 9px;
       transition: 0.2s;
       cursor: pointer;
     }
