@@ -4,7 +4,6 @@ html {
 
 body {
   		background: #212121;
-  		height: 100%;
   		font-family: Arial;
   	}
 
@@ -12,6 +11,30 @@ body {
    a:visited {color: #DCDCDC}
    a:active {color: #DCDCDC}
    a:link {color: #DCDCDC}
+
+
+   .container {
+    width: 100%;
+    left: 0;
+    top: 0;
+   }
+
+
+  .form-control {
+  width:90%;
+  margin-top: 5px;
+  resize: vertical;
+  padding:12px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:7px;
+  }
+
+  .form-control-label {
+    font-weight: bold;
+    margin-left: 10px;
+  }
 
    #shortcut-icon {
     border-radius: 10px;
@@ -194,12 +217,13 @@ body {
 
 
    #center-content {
-    width: 100%;
+    width: 101%;
     height: 470px;
-    position: absolute;
     left: 0;
     background-color: #262626;
-    margin-top: -82px;
+    margin-top: -10px;
+    position: relative;
+    padding-top: 10px;
    }
 
    #news-title {
@@ -335,9 +359,10 @@ body {
    #articles {
     width: 100%;
     height: 470px;
-    position: absolute;
-    margin-top: 390px;
-    text-align: center; 
+    margin-top: 0px;
+    text-align: center;
+    position: relative;
+    padding-top: 10px;
    }
    #art-title {
     color: #DCDCDC;
@@ -433,14 +458,14 @@ body {
 
 
    #footer {
-    width: 100%;
-    bottom: 0;
-    left: 0;
+    width: 101.5%;
+    left: -1%;
     background-color: #333333;
     color: #DCDCDC;
     height: 180px;
-    position: fixed;
+    position: relative;
     padding-top: 15px;
+    margin-top: 50px;
    }
 
    #wides {
@@ -583,6 +608,8 @@ body {
       border: 2px solid;
       border-radius: 1px;
       transition: 0.2s;
-    } 
-  .sp-buttons:hover { background: rgba(255,255,255,.2); }
-  .sp-buttons:active { background: white; }
+      cursor: pointer;
+    }
+  .sp-buttons:enabled{ background: rgba(255,255,255, 0); }
+  .sp-buttons:active { background: rgba(255,255,255, .2); }
+  .sp-buttons:hover { background: rgba(255,255,255, .2); }

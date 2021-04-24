@@ -25,7 +25,7 @@
             </h2>
             </div>
 		    {% if current_user.is_authenticated %}
-                    <a class="" href="/logout">{{ current_user.name }}</a>
+                    <a class="" href="/logout" id="name-link" style="position: absolute; right: 83px; top: 28px; font-size: 22px; font-weight: bold;">{{ current_user.name }}</a>
             {% else %}
                     <a class="sp-buttons" href="/login" style="position: absolute; right: 83px; top: 21px;">Войти</a>
             {% endif %}

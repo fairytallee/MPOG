@@ -2,7 +2,7 @@ from flask import Flask
 from data import db_session
 from data.users import User
 
-from forms import LoginForm
+from forms import LoginForm, RegisterForm
 
 import datetime
 
@@ -42,13 +42,42 @@ def login():
     if form.validate_on_submit():
         db_sess = db_session.create_session()
         user = db_sess.query(User).filter(User.email == form.email.data).first()
-        if user and user.hashed_password == form.password.data:
+        if user and user.password == form.password.data:
             login_user(user, remember=form.remember_me.data)
             return redirect("/")
         return render_template('login.html',
                                message="Неправильный логин или пароль",
                                form=form)
-    return render_template('login.html', title='Авторизация', form=form)
+    return render_template('login.html', title='Авторизация - Sputnik', form=form)
+
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect("/")
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegisterForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        user = User()
+        if user and form.age.data and int(form.age.data) >= 14:
+            user.name = form.name.data
+            user.surname = form.surname.data
+            user.age = form.age.data
+            user.email = form.email.data
+            user.password = form.password.data
+            db_sess.add(user)
+            db_sess.commit()
+            login_user(user, remember=form.remember_me.data)
+            return redirect("/")
+        return render_template('register.html',
+                               message="Возраст не может быть меньше 14-ти",
+                               form=form)
+    return render_template('register.html', title='Регистрация - Sputnik', form=form)
 
 
 if __name__ == '__main__':
